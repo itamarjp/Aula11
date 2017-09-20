@@ -49,12 +49,15 @@ public class AnimalAdapter extends BaseAdapter {
 
         //3º passo
         ImageView img = (ImageView) linha.findViewById(R.id.imageView);
-        TextView nome = (TextView) linha.findViewById(R.id.textView);
+        TextView rank = (TextView) linha.findViewById(R.id.textViewRank);
+        TextView country = (TextView) linha.findViewById(R.id.textViewCountry);
+        TextView population = (TextView) linha.findViewById(R.id.textViewPopulation);
 
         TypedArray fotos = ctx.getResources().obtainTypedArray(R.array.fotos);
         img.setImageDrawable(fotos.getDrawable(animal.foto));
-        nome.setText(animal.nome);
-
+        rank.setText("Rank: " +animal.Rank);
+        country.setText("Country: "+ animal.Country);
+        population.setText("Population: "+ animal.Population);
         return linha;
     }
 }

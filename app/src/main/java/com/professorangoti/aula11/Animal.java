@@ -1,11 +1,15 @@
 package com.professorangoti.aula11;
 
 public class Animal {
-    public String nome;
+    public String Rank;
+    public String Country;
+    public String Population;
     public int foto;
 
-    public Animal(String nome, int foto) {
-        this.nome = nome;
+    public Animal(String Rank,String Country,String Population,  int foto) {
+        this.Rank = Rank;
+        this.Country = Country;
+        this.Population = Population;
         this.foto = foto;
     }
 }

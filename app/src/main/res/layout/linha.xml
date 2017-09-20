@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    tools:context="com.professorangoti.aula11.MainActivity">
-
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.professorangoti.aula11.Main2Activity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:layout_weight="1"
-        />
+        android:id="@+id/textViewRank"
+        android:layout_width="225dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="6dp" />
+
+    <TextView
+        android:id="@+id/textViewCountry"
+        android:layout_width="224dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewRank"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRank" />
+
+    <TextView
+        android:id="@+id/textViewPopulation"
+        android:layout_width="225dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCountry"
+        tools:layout_editor_absoluteX="6dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginRight="0dp"
-        
-        />
-</LinearLayout>
+        android:src="@drawable/cachorro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
